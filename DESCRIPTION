@@ -1,0 +1,29 @@
+Package: electpollBR
+Title: Download Data on Registered Electoral Polls Conducted in Brazil
+Version: 0.0.0.1
+Authors@R: 
+    person(
+      "Marcelo", c("Ventura", "Freire"), 
+      email = "mvf@usp.br", 
+      role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0003-1735-2435")
+    )
+Description: 
+    Downloads and tidies up data on electoral polls conducted in Brazil.  
+    Due to its impact on public opinion and therefore on the elections itself,
+    every electoral poll is required by law to be registered in a
+    Regional Electoral Court (TRE, Tribunal Regional Eleitoral)
+    and the company that conducts the poll is required to be registered with the
+    Regional Statistical Council (CONRE, Conselho Regional de Estatística)
+    with coverage in the places where the poll is conducted
+    and is required to have a statistician registered with the same Council
+    as the technical responsible for the poll.  
+    Although there exists a site for querying registered polls at
+    <https://pesqele-divulgacao.tse.jus.br/index.xhtml>,
+    we download the data directly from the open data site of
+    Superior Electoral Court (TSE, Tribunal Superior Eleitoral) at
+    <https://dadosabertos.tse.jus.br/>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
