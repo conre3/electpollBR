@@ -27,3 +27,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+URL: https://github.com/conre3/electpollBR
+BugReports: https://github.com/conre3/electpollBR/issues
