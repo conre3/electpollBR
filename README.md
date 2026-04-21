@@ -63,6 +63,8 @@ Funcionalidades a implementar
 
 Reminder to self:
 
+- quando começar a rodar, chamar `load_all()` ou teclar `Ctrl+Shift+L`
+  para carregar todas as dependências do pacote
 - incluir arquivos .R com a função `use_r("nome_função")`
   - a função `use_r("nome_função")`
     - cria `./R/nome_função.R` se não existir
@@ -75,3 +77,28 @@ Reminder to self:
     - abre o script `./tests/testthat/test_nome_função.R` se ele existir
 - para renomear .R e seu script de teste de uma só vez, usar
   `rename_files("nome_velho", "nome_novo")`
+- para editar variáveis de ambiente (como info como login, senha, token
+  de autenticação etc.)
+  - usar `edit_r_environ()` para editar `~/.Renviron` global
+  - usar `edit_r_environ(scope = "project")` para editar `./.Renviron`
+    local
+  - usar `Sys.getenv("nome_var")` para puxar `nome_var` dos `.Renviron`
+    local e global
+- para incluir pacotes que serão usados no pacote, usar
+  `use_package(nome)`, que já inclui entradas no campo `Imports:` do
+  DESCRIPTION
+- nos scripts de teste, criar testes com chamadas à função
+  `testthat::test_that("nome_teste", {bloco de código})`, usando as
+  funções de `{testthat}` dentro do `bloco de código`, em particular as
+  funções `testethat::expect_*()`
+- inserir esqueleto de documentação do Roxygen com a `Alt+Ctrl+Shift+R`
+  - depois precisa chamar `devtools::document()` ou teclar
+    `Ctrl+Shift+D` para atualizar a documentação a partir dos
+    comentários do Roxygen
+- para verificar se o pacote está buildando, chamar `devtools::check()`
+  ou teclar `Ctrl+Shift+E`
+- para rodar os testes unitários,
+  - chamar `devtools::test()` ou teclar `Ctrl+Shift+T` para rodar todos
+    os testes do pacote
+  - chamar `devtools::test_active_file()` para rodar os testes do .R
+    atual
