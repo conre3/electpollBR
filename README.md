@@ -7,7 +7,16 @@
 
 <!-- badges: end -->
 
-The goal of electpollBR is to …
+The goal of electpollBR is to
+
+- download and tidy up data from Brazilian Electoral Justice on
+  registered electoral polls (not only results, but mainly registration
+  data, like the company that conducted the poll, when and where it was
+  conducted, technical responsible, contractor, payer, invoice,
+  questionnaire, and coverage)
+- list availability of data by year
+- check whether or not the previously downloaded data file is still
+  up-to-date, avoiding downloading it again needlessly
 
 ## Installation
 
@@ -50,9 +59,9 @@ Funcionalidades a implementar
   - função de gravação em diretório de dados limpos
 - dúvida: precisaria de:
   - função de exportação dos dados limpos
-  - função de busca por
+  - função de busca por ano
 
-TODO list:
+Reminder to self:
 
 - incluir arquivos .R com a função `use_r("nome_função")`
   - a função `use_r("nome_função")`
