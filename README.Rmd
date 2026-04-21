@@ -27,7 +27,7 @@ The goal of electpollBR is to ...
 
 You can install the development version of `{electpollBR}` from [GitHub](https://github.com/) with:
 
-``` r
+```{r , eval=FALSE}
 # install.packages("pak")
 pak::pak("conre3/electpollBR")
 ```
