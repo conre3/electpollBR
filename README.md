@@ -9,22 +9,6 @@
 
 The goal of electpollBR is to …
 
-- funcionalidades a implementar
-  - função para setar o diretório de download (para lidar com
-    interrupção e continuação de dowload parcial)
-  - função para baixar o arquivo de dados de registro das pesquisas
-    segundo ano e opcionalmente estado
-    - função de definição das URIs dos arquivos a baixar
-    - função de download da URI em diretório de dados brutos
-    - função de descompactação do arquivo baixado
-    - função de importação do arquivo descompatado
-    - função de faxina dos dados importados
-    - função de gravação em diretório de dados limpos
-  - dúvida: precisaria de:
-    - função de exportação dos dados limpos
-    - função para listar as pesquisas
-    - função de busca por
-
 ## Installation
 
 You can install the development version of `{electpollBR}` from
@@ -35,35 +19,50 @@ You can install the development version of `{electpollBR}` from
 pak::pak("conre3/electpollBR")
 ```
 
-## Example
+## Package Design
 
-This is a basic example which shows you how to solve a common problem:
+Funcionalidades a implementar
 
-``` r
-#library(electpollBR)
-## basic example code
-```
+- função de setup do diretório de download
+  - para lidar com interrupção e continuação de dowload parcial
+  - parâmetros
+    - keep.download=TRUE
+    - download.path=“./data/electpollBR/raw/”
+    - save.path=“./data/electpollBR/”
+    - save.copy.on.base=TRUE
+  - criar os diretório
+    - “./data/” (se não existir)
+    - “./data/electpollBR/”
+    - “./data/electpollBR/raw/” (diretório de dados brutos)
+  - criar o arquivo
+    - “./data/.gitignore” (com “electpollBR/)
+- função para listar as pesquisas
+- função para baixar o arquivo de dados de registro das pesquisas
+  segundo ano e opcionalmente estado
+  - verifica
+  - função de definição das URIs dos arquivos a baixar
+  - função para verificar se a versão do arquivos de dados no site é
+    mais recente do que a versão já baixada
+  - função de download da URI em diretório de dados brutos
+  - função de descompactação do arquivo baixado
+  - função de importação do arquivo descompatado
+  - função de faxina dos dados importados
+  - função de gravação em diretório de dados limpos
+- dúvida: precisaria de:
+  - função de exportação dos dados limpos
+  - função de busca por
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+TODO list:
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" alt="" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+- incluir arquivos .R com a função `use_r("nome_função")`
+  - a função `use_r("nome_função")`
+    - cria `./R/nome_função.R` se não existir
+    - abre e põe como arquivo ativo se existir
+  - a função `use_r()` mostra qual é o arquivo ativo
+- criar arquivo de teste com a função `use_test()`
+  - a função `use_test()`
+    - cria `./tests/testthat/test_nome_função.R` se `./R/nome_função.R`
+      for o arquivo ativo
+    - abre o script `./tests/testthat/test_nome_função.R` se ele existir
+- para renomear .R e seu script de teste de uma só vez, usar
+  `rename_files("nome_velho", "nome_novo")`
