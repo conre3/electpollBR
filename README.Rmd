@@ -111,3 +111,86 @@ pak::pak("conre3/electpollBR")
     - chamar `devtools::test_active_file()` para rodar os testes do .R atual
 
 
+### TSE's Open Data Portal's URIs
+
+- Página inicial
+    - URI: https://dadosabertos.tse.jus.br/
+- Página de grupos de conjuntos de dados
+    - URI: https://dadosabertos.tse.jus.br/group/
+    - Grupos de dados presentes:
+        - Candidatos
+            - 35 Conjuntos de dados
+        - Comparecimento e Abstenção
+            - 6 Conjuntos de dados
+        - Dados de apoio
+            - 3 Conjuntos de dados
+        - Eleitorado
+            - 19 Conjuntos de dados
+        - Mesárias, Mesários e Funções Especiais
+            - 5 Conjuntos de dados
+        - Partidos
+            - 1 Conjunto de dados
+        - Pesquisas Eleitorais
+            - 8 Conjuntos de dados
+        - Prestação de Contas Eleitorais
+            - 12 Conjuntos de dados
+        - Prestação de Contas Partidárias
+            - 12 Conjuntos de dados
+        - Processual
+            - 4 Conjuntos de dados
+        - Resultados
+            - 61 Conjuntos de dados
+- Página dos conjuntos de dados de Pesquisas Eleitorais
+    - URI: https://dadosabertos.tse.jus.br/group/pesquisas-eleitorais
+    - Dados
+        - Pesquisas eleitorais
+            - formato: CSV
+            - início: 2012
+            - fim: 2026
+        - Contratantes
+            - formato: CSV
+            - início: 2012
+            - fim: 2026
+        - Pagantes
+            - formato: CSV
+            - início: 2012
+            - fim: 2026
+        - Notas fiscais
+            - formato: PDF
+            - início: 2014
+            - fim: 2026
+        - Questionários de pesquisa
+            - formato: PDF
+            - início: 2012
+            - fim: 2026
+        - Detalhamento de bairro/município
+            - formato: PDF
+            - início: 2012
+            - fim: 2026
+- labirinto das páginas
+    - https://dadosabertos.tse.jus.br/
+        - https://dadosabertos.tse.jus.br/group/
+            - https://dadosabertos.tse.jus.br/group/pesquisas-eleitorais
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual
+                    - essa URI é a do ano de 2022 e foge ao padrão
+                    - dá para raspar contornando esse problema
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/3c0e4df8-1e6f-4468-bae1-65aed8c0eac3
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2022.zip
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/97b0b8da-0572-4196-a5c6-6db271200eb5
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2022.zip
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/348c1024-30a2-4edd-9c92-d90bf234f4c0
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_pagante_2022.zip
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/9912a91e-5b92-49a2-a713-1297bf3ee2cd
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/nota_fiscal_2022.zip
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/48abe758-45e4-4e4c-bedd-41acd40601f3
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/questionario_pesquisa_2022.zip
+                    - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/c7b825bb-34cc-4d20-b3ef-7bc514895ab6
+                        - https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/bairro_municipio_2022.zip
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2024
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2020
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2018
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2016
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2014
+                - https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2012
+
