@@ -32,3 +32,5 @@ BugReports: https://github.com/conre3/electpollBR/issues
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    httr2
