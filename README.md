@@ -49,10 +49,10 @@ pak::pak("conre3/electpollBR")
 - função para baixar o arquivo de dados de registro das pesquisas
   segundo ano e opcionalmente estado
   - verifica
-  - função de definição das URIs dos arquivos a baixar
+  - função de definição das URLs dos arquivos a baixar
   - função para verificar se a versão do arquivos de dados no site é
     mais recente do que a versão já baixada
-  - função de download da URI em diretório de dados brutos
+  - função de download da URL em diretório de dados brutos
   - função de descompactação do arquivo baixado
   - função de importação do arquivo descompatado
   - função de faxina dos dados importados
@@ -103,12 +103,12 @@ pak::pak("conre3/electpollBR")
   - chamar `devtools::test_active_file()` para rodar os testes do .R
     atual
 
-### TSE’s Open Data Portal’s URIs
+### TSE’s Open Data Portal’s URLs
 
 - Página inicial
-  - URI: <https://dadosabertos.tse.jus.br/>
+  - URL: <https://dadosabertos.tse.jus.br/>
 - Página de grupos de conjuntos de dados
-  - URI: <https://dadosabertos.tse.jus.br/group/>
+  - URL: <https://dadosabertos.tse.jus.br/group/>
   - Grupos de dados presentes:
     - Candidatos
       - 35 Conjuntos de dados
@@ -133,7 +133,7 @@ pak::pak("conre3/electpollBR")
     - Resultados
       - 61 Conjuntos de dados
 - Página dos conjuntos de dados de Pesquisas Eleitorais
-  - URI: <https://dadosabertos.tse.jus.br/group/pesquisas-eleitorais>
+  - URL: <https://dadosabertos.tse.jus.br/group/pesquisas-eleitorais>
   - Dados
     - Pesquisas eleitorais
       - formato: CSV
@@ -166,7 +166,7 @@ pak::pak("conre3/electpollBR")
   - <https://dadosabertos.tse.jus.br/group/>
     - <https://dadosabertos.tse.jus.br/group/pesquisas-eleitorais>
       - <https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual>
-        - essa URI é a do ano de 2022 e foge ao padrão
+        - essa URL é a do ano de 2022 e foge ao padrão
         - dá para raspar contornando esse problema
         - <https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-atual/resource/3c0e4df8-1e6f-4468-bae1-65aed8c0eac3>
           - <https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2022.zip>
