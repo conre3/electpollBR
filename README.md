@@ -21,10 +21,10 @@ The goal of electpollBR is to
 ## Installation
 
 You can install the development version of `{electpollBR}` from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/) with
 
 ``` r
-# install.packages("pak")
+install.packages("pak")
 pak::pak("conre3/electpollBR")
 ```
 
