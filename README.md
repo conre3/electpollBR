@@ -30,7 +30,7 @@ pak::pak("conre3/electpollBR")
 
 ## Package Design
 
-Funcionalidades a implementar
+### Functionalities to implement
 
 - função de setup do diretório de download
   - para lidar com interrupção e continuação de dowload parcial
@@ -61,7 +61,7 @@ Funcionalidades a implementar
   - função de exportação dos dados limpos
   - função de busca por ano
 
-Reminder to self:
+### Reminder to self:
 
 - quando começar a rodar, chamar `load_all()` ou teclar `Ctrl+Shift+L`
   para carregar todas as dependências do pacote
