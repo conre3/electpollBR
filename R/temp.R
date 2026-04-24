@@ -47,6 +47,16 @@ unzip("data/zip/pesquisa_pagante_2026.zip", exdir = "data/csv")
 ### perhaps the invoice PFDs will be the only needed to pass through tesseract
 # TODO
 
+# importing CSVs ----
+
+## dealing with encoding issues ----
+### I noticed that the CSV files are encoded with something else than unicode, ----
+### probably with encoding Windows-1252 (CP1252) or ISO-8859-1 (Latin1)
+### So I will read them with the encoding parameter set to "ISO-8859-1"
+### to convert it to UTF-8
+# TODO: Read CSV files with ISO-8859-1 encoding
+### perhaps deal with it in linux level ----
+
 # tidy up CSVs ----
 
 ## gathering data from all states ----
