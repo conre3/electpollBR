@@ -47,3 +47,17 @@ unzip("data/zip/pesquisa_pagante_2026.zip", exdir = "data/csv")
 ### perhaps the invoice PFDs will be the only needed to pass through tesseract
 # TODO
 
+# tidy up CSVs ----
+
+## gathering data from all states ----
+### gathering polls ----
+# TODO
+
+### gathering contractors ----
+# TODO
+
+### gathering invoices ----
+# TODO
+
+## joining polls, contractors, and invoices ----
+# TODO
