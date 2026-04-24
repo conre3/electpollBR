@@ -33,3 +33,17 @@ download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral
 download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/questionario_pesquisa_2026.zip", destfile = "data/zip/questionario_pesquisa_2026.zip", method = "curl")
 download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/bairro_municipio_2026.zip", destfile = "data/zip/bairro_municipio_2026.zip", method = "curl")
 
+# unpack downloaded files ----
+## CSVs first ----
+unzip("data/zip/pesquisa_eleitoral_2026.zip", exdir = "data/csv")
+unzip("data/zip/pesquisa_contratante_2026.zip", exdir = "data/csv")
+unzip("data/zip/pesquisa_pagante_2026.zip", exdir = "data/csv")
+## ?unpack PDFs? ----
+### or should I just: ----
+### - unpack one PDF at a time,
+### - pass it through tesseract,
+### - extract relevant info from each PDF, and
+### - mount a dataframe?
+### perhaps the invoice PFDs will be the only needed to pass through tesseract
+# TODO
+
