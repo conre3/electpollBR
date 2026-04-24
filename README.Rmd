@@ -41,6 +41,40 @@ pak::pak("conre3/electpollBR")
 
 ## Package Design
 
+
+### Scripts
+
+- `init.R`
+    - .onLoad
+        - roda as funções de teste em `scrape.R`
+        - verifica se a estrutura de diretórios de download está ok
+    - definição das variáveis globais no pacote
+    - faz o setup da estrutura de diretórios para o download
+    - verifica se a estrutura de diretórios para download está montada
+- `scrape.R`
+    - definições das urls
+    - testa conexão
+      - ve se tá online
+    - teste de url
+        - testa se as urls básicas ainda são as mesmas
+    - mensagem de erro por falta de url
+    - raspa as pesquisas na url 
+        - retorna um df com nome do dado, ano, e tamanho
+    - lista os dados disponíveis por ano
+        - retorna a df acima
+    - compara os anos encontrados com os anos que eu sei que deveriam estar lá
+        - dá warning ou erro (?) se der diferença
+    - compara os dados encontrados com os dados que eu sei que deveriam estar lá
+        - dá warning ou erro (?) se der diferença
+    - testa se há dados novos quando deveria haver (anos pares)
+        - se não houver um dados esperado, solta warning pedindo para me avisar
+- `download.R`
+    - baixa por ano
+    - descompacta
+    - trata
+    
+
+
 ### Functionalities to implement
 
 - função de setup do diretório de download 
