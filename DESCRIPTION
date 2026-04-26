@@ -34,6 +34,11 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     devtools,
+    dplyr,
     httr2,
+    jsonlite,
+    lubridate,
+    purrr,
     RCurl,
+    readr,
     rvest
