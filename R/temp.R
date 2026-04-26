@@ -124,9 +124,9 @@ jsonlite::write_json(current, timestampfile.path, auto_unbox = TRUE)
 
 # unpack downloaded files ----
 ## CSVs first ----
-unzip("data/zip/pesquisa_eleitoral_2026.zip", exdir = "data/csv")
-unzip("data/zip/pesquisa_contratante_2026.zip", exdir = "data/csv")
-unzip("data/zip/pesquisa_pagante_2026.zip", exdir = "data/csv")
+zipfiles.download.names[1:3] |>
+  purrr::map(purrr::partial(unzip, exdir = csvfiles.path))
+
 ## ?unpack PDFs? ----
 ### or should I just: ----
 ### - unpack one PDF at a time,
