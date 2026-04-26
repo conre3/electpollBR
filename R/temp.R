@@ -111,17 +111,6 @@ if (any(zipfile.outdated)) {
 ### save current zip files' timestamps ----
 jsonlite::write_json(current, timestampfile.path, auto_unbox = TRUE)
 
-# # # initial version of download code (w/o timestamp check)
-# ## ZIPs de CSV
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_eleitoral_2026.zip", destfile = "data/zip/pesquisa_eleitoral_2026.zip", method = "curl")
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_contratante_2026.zip", destfile = "data/zip/pesquisa_contratante_2026.zip", method = "curl")
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/pesquisa_pagante_2026.zip", destfile = "data/zip/pesquisa_pagante_2026.zip", method = "curl")
-#
-# ## ZIPs de PDF (mais pesados)
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/nota_fiscal_2026.zip", destfile = "data/zip/nota_fiscal_2026.zip", method = "curl")
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/questionario_pesquisa_2026.zip", destfile = "data/zip/questionario_pesquisa_2026.zip", method = "curl")
-# download.file("https://cdn.tse.jus.br/estatistica/sead/odsele/pesquisa_eleitoral/bairro_municipio_2026.zip", destfile = "data/zip/bairro_municipio_2026.zip", method = "curl")
-
 # unpack downloaded files ----
 ## CSVs first ----
 zipfiles.download.names[1:3] |>
