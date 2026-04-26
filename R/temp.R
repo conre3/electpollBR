@@ -137,26 +137,35 @@ zipfiles.download.names[1:3] |>
 # TODO
 
 # importing CSVs ----
-
-## dealing with encoding issues ----
-### I noticed that the CSV files are encoded with something else than unicode, ----
-### probably with encoding Windows-1252 (CP1252) or ISO-8859-1 (Latin1)
-### So I will read them with the encoding parameter set to "ISO-8859-1"
-### to convert it to UTF-8
-# TODO: Read CSV files with ISO-8859-1 encoding
-### perhaps deal with it in linux level ----
+polls <-
+  "data/csv/pesquisa_eleitoral_2026_BRASIL.csv" |>
+  readr::read_csv2(
+    locale =
+      readr::locale(
+        encoding = "ISO-8859-1",
+        asciify = FALSE
+      )
+  )
+contractors <-
+  "data/csv/pesquisa_contratante_2026_BRASIL.csv" |>
+  readr::read_csv2(
+    locale =
+      readr::locale(
+        encoding = "ISO-8859-1",
+        asciify = FALSE
+      )
+  )
+payers <-
+  "data/csv/pesquisa_pagante_2026_BRASIL.csv" |>
+  readr::read_csv2(
+    locale =
+      readr::locale(
+        encoding = "ISO-8859-1",
+        asciify = FALSE
+      )
+  )
 
 # tidy up CSVs ----
-
-## gathering data from all states ----
-### gathering polls ----
-# TODO
-
-### gathering contractors ----
-# TODO
-
-### gathering invoices ----
-# TODO
 
 ## joining polls, contractors, and invoices ----
 # TODO
