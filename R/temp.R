@@ -112,9 +112,19 @@ if (any(zipfile.outdated)) {
 jsonlite::write_json(current, timestampfile.path, auto_unbox = TRUE)
 
 # unpack downloaded files ----
-## CSVs first ----
+## unpacking CSVs first ----
+### extracting only *_BRASIL.csv, for it has all states' records at once
 zipfiles.download.names[1:3] |>
-  purrr::map(purrr::partial(unzip, exdir = csvfiles.path))
+  purrr::walk(
+    \(z)
+      unzip(
+        z,
+        files =
+          unzip(z, list = TRUE)$Name |>
+          stringr::str_subset(pattern = "BRASIL"),
+        exdir = csvfiles.path
+      )
+  )
 
 ## ?unpack PDFs? ----
 ### or should I just: ----
