@@ -121,7 +121,7 @@ zipfiles.download.names[1:3] |>
         z,
         files =
           unzip(z, list = TRUE)$Name |>
-          stringr::str_subset(pattern = "BRASIL"),
+          stringr::str_subset(pattern = "_SP"), # focusing on SP only, for we are CONRE 3
         exdir = csvfiles.path
       )
   )
